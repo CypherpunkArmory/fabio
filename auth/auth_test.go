@@ -19,7 +19,7 @@ func TestLoadAuthSchemes(t *testing.T) {
 			},
 		})
 
-		const errorText = "open /some/non/existent/file: no such file or directory"
+		const errorText = "stat /some/non/existent/file: no such file or directory"
 
 		if err.Error() != errorText {
 			t.Fatalf("got %s, want %s", err.Error(), errorText)
